@@ -9,17 +9,26 @@
 //     Console.WriteLine($"Максимальное число {a}");
 
 //Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-Console.WriteLine("Введите первое число");
+// Console.WriteLine("Введите первое число");
+// int a = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите второе число");
+// int b = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите третье число");
+// int c = int.Parse(Console.ReadLine()!);
+// int max = a;
+// if (b>max) {
+//     max = b;
+// }
+// if (c>max) {
+//     max = c;
+// }
+// Console.WriteLine($"Максимальное число {max}");
+
+// Задача 3: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+Console.WriteLine("Введите число");
 int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите второе число");
-int b = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите третье число");
-int c = int.Parse(Console.ReadLine()!);
-int max = a;
-if (b>max) {
-    max = b;
-}
-if (c>max) {
-    max = c;
-}
-Console.WriteLine($"Максимальное число {max}");
+if (a%2==0)
+    Console.WriteLine("Число чётное");
+else 
+    Console.WriteLine("Число нечётное");
