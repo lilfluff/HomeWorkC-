@@ -1,0 +1,288 @@
+/ Console.WriteLine("Введите количество строк ");
+// int rows = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите количество столбцов ");
+// int columns = int.Parse(Console.ReadLine()!);
+// int[,] array = FillArray(rows, columns, 0, 10);
+// PrintAray(array);
+// int[,] FillArray(int m, int n, int minvalue, int maxvalue)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i,j] = new Random().Next(minvalue, maxvalue + 1);
+//         }
+//     }
+//     return result;
+// }
+// void PrintAray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++) {
+//             Console.Write($"{array[i, j]}");
+//             }
+//     Console.WriteLine();
+// }
+// }
+
+// Console.WriteLine("Введите количество строк ");
+// int rows = int.Parse(Console.ReadLine()!);
+// Console.WriteLine("Введите количество столбцов ");
+// int columns = int.Parse(Console.ReadLine()!);
+// int[,] array = FillArray(rows, columns);
+// PrintAray(array);
+// SquareArray(array);
+// Console.WriteLine();
+// PrintAray(array);
+// void SquareArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i % 2 == 0 && j % 2 == 0)
+//             {
+//                 array[i, j] *= array[i, j];
+//             }
+//         }
+//     }
+// }
+
+// int[,] FillArray(int m, int n)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = new Random().Next(0, 10);
+//         }
+//     }
+//     return result;
+// }
+// void PrintAray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// int[,] array = FillArray(3, 4, 0, 10);
+// PrintAray(array);
+// Console.WriteLine();
+// Console.WriteLine($"Сумма элементов с одинаковыми индексами {SummArray(array)}");
+// int SummArray(int[,] array)
+// {int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i == j)
+//             {
+//                 sum += array[i,j];
+//             }
+//         }
+//     }
+//     return sum;
+// }
+
+// int[,] FillArray(int m, int n, int minvalue, int maxvalue)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = new Random().Next(minvalue, maxvalue);
+//         }
+//     }
+//     return result;
+// }
+// void PrintAray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// ----------------СЕМИНАР 7-----------------
+// int[,] array = FillArray(5, 6, 0, 10);
+// PrintAray(array);
+// ReverseRows(array);
+// Console.WriteLine();
+// PrintAray(array);
+// void ReverseRows(int[,] array)
+// {
+//     int[] temp = new int[array.GetLength(1)];
+//     for (int i = 0; i < array.GetLength(1); i++)
+//     {
+//         temp[i] = array[0, i];
+//     }
+//     for (int i = 0; i < array.GetLength(1); i++)
+//     {
+//         array[0, i] = array[array.GetLength(0) - 1, i];
+//     }
+//     for (int i = 0; i < array.GetLength(1); i++)
+//     {
+//         array[array.GetLength(0) - 1, i] = temp[i];
+//     }
+// }
+
+// int[,] FillArray(int m, int n, int minvalue, int maxvalue)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = new Random().Next(minvalue, maxvalue);
+//         }
+//     }
+//     return result;
+// }
+// void PrintAray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+//  Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
+//  В случае, если это невозможно, программа должна вывести сообщение для пользователя.
+// int[,] Result(int[,] array)
+// {
+//     int[,] result = new int[array.GetLength(0), array.GetLength(1)];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             result[i, j] = array[j, i];
+//         }
+//     }
+//     return result;
+// }
+// int[,] FillArray(int m, int n, int minvalue, int maxvalue)
+// {
+//     int[,] result = new int[m, n];
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             result[i, j] = new Random().Next(minvalue, maxvalue);
+//         }
+//     }
+//     return result;
+// }
+// void PrintAray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// int[,] array = FillArray(3, 4, 0, 10);
+// PrintAray(array);
+// if (array.GetLength(0) != array.GetLength(1))
+// {
+//     Console.WriteLine("Невозможно заменить строки на столбцы");
+// }
+// else
+// {
+
+//     int [,] newarray = Result(array);
+//     Console.WriteLine();
+//     PrintAray(newarray);
+// }
+
+// удал строку и столбец на пересчении мин числа
+
+int[,] FillArray(int m, int n, int minvalue, int maxvalue)
+{
+    int[,] result = new int[m, n];
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            result[i, j] = new Random().Next(minvalue, maxvalue);
+        }
+    }
+    return result;
+}
+void PrintAray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+int[] FindMinElement(int[,] array)
+{
+    int min = array[0, 0];
+    int[] minIndex = new int[2];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] < min)
+            {
+                min = array[i, j];
+                minIndex[0] = i;
+                minIndex[1] = j;
+            }
+        }
+    }
+    return minIndex;
+}
+int[,] ResultArray(int[] min, int[,] array)
+{
+    int[,] result = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+    int n = 0;
+    int m = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        if (i == min[0]) continue;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (j == min[1]) continue;
+            result[n, m] = array[i, j];
+            m++;
+        }
+        m = 0;
+        n++;
+    }
+    return result;
+}
+
+int[,] array = FillArray(4, 4, 1, 10);
+PrintAray(array);
+int[] min = FindMinElement(array);
+int[,] NewArray = ResultArray(min, array);
+Console.WriteLine();
+PrintAray(NewArray);
+
